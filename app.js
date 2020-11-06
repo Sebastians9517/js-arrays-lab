@@ -193,10 +193,16 @@ Exercise 15:
 // Complete Exercise 15 below...
 let total = 0;
 
-for(let e = 0; e < numArrays.length; e++){
-  for(let k = 0; k < numArrays[e][k]; k++){
-    total += numArrays[e][k];
-  }
-}
+// for(let e = 0; e < numArrays.length; e++){
+//   for(let k = 0; k < numArrays[e][k]; k++){
+//     total += numArrays[e][k];
+//   }
+// }
+
+numArrays.forEach(function(sumArray){
+  sumArray.forEach(function(sum){
+    total += sum;
+  });
+});
 
 console.log('Exercise 15 Result:\n', total);
